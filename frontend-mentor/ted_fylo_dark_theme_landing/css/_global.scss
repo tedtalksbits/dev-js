@@ -1,0 +1,28 @@
+
+html{
+    font-size: 100%;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-body;
+    font-size: calc(16px + 0.75vw);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3{
+    font-family: $font-title;
+    color: #fefefe;
+}
+p{
+    color: #fefefe;
+}
+
+section{
+    padding: 0 27px;
+}
+

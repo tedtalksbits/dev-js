@@ -1,0 +1,45 @@
+
+*{
+    color: #eae9ec;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #14212a;
+}
+
+.main-wrap{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+span{
+    font-size: .8rem;
+    opacity: .5;
+}
+
+li{
+    cursor: pointer;
+}
+
+center-column{
+    background: #f48fb1;
+    padding: 20px;
+}
+
+/* not my code */
+.pink-textarea textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+  }
+  .active-pink-textarea.md-form label.active {
+    color: #f48fb1;
+  }
+  .active-pink-textarea.md-form textarea.md-textarea:focus:not([readonly])+label {
+    color: #f48fb1;
+  }

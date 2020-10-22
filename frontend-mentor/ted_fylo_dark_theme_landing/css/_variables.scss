@@ -1,0 +1,20 @@
+//fonts 
+$font-body: 'Open Sans', sans-serif;
+$font-title: 'Raleway', sans-serif;
+
+
+//breakpoints 
+$breakpoints: (
+    smaller: 260px,
+    small: 499px,
+    medium: 899px,
+    large: 999px,
+    larger: 1399px
+);
+
+@mixin  breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints , $size);
+    @media screen and (min-width: $breakpoint-value){
+        @content;
+    }
+}

@@ -1,0 +1,89 @@
+body{
+    padding: 40px 40px 0px 40px;
+    background-color: $purple;
+    background-image: url('/images/bg-mobile.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+
+    /*only applied to screens larger than 1024px*/
+    @media screen and (min-width: 1024px){
+        background-image: url('/images/bg-desktop.svg');
+        padding: 60px 60px 0px 60px;
+    }
+    @media screen and (min-width: 1650px){
+        padding: 60px 300px 0px 300px;
+    }
+}
+
+main{
+    
+    margin-bottom: 80px;
+    /*only applied to screens larger than 1024px*/
+    @media screen and (min-width: 1024px){
+       display: grid;
+       margin-bottom: 26px;
+       grid-template-columns: minmax(250px, 60%) 1fr;
+    }
+   
+}
+
+.hero-image{
+    margin-bottom: 72px;
+    /*only applied to screens larger than 1024px*/
+    @media screen and (min-width: 1024px){
+        margin-bottom: 0;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.hero-text{
+    text-align: center;
+    line-height: 1.7;
+    /*only applied to screens larger than 1024px*/
+    @media screen and (min-width: 1024px){
+       padding-left: 60px;
+       text-align: left;
+    }
+    @media screen and (min-width: 1650px){
+        
+        padding-left: 130px;
+    }
+}
+h2{
+    margin: 0;
+    font-family: $font-title;
+    font-size: 26px;
+    @media screen and (min-width: 1024px){
+        font-size: 32px;
+    }
+}
+.cta{
+    
+    min-width: 200px;
+    margin-top: 26px;
+    padding: 16px;
+    background: white;
+    color: $purple;
+    line-height: 1;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px darken($purple, 20%);
+    font-family: $font-title;
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+
+    /*only applied to screens larger than 1024px*/
+    @media screen and (min-width: 1024px){
+        padding: 20px 66px;
+     }
+}
+.cta:hover{
+    background: #e051d4;
+    color: white;
+   
+}
+

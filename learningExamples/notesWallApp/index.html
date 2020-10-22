@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Note Wall</title>
+</head>
+<body>
+
+    <div class="top-div">
+        <textarea name="" id="" cols="70" rows="8" class="textarea" placeholder="Add notes"></textarea>
+        <div class="column">
+            <input type="color" value="#ccffcc" class="color">
+            <div class="space"></div>
+            <div class="space"></div>
+            <button class="add-note" id="button">Add Note</button>
+        </div>
+    </div>
+    <div class="notes-list">
+        <div class="notes-parent">
+            
+        </div>
+
+    </div>
+    <script>
+
+        //getting dom elements
+        const button = document.querySelector('#button');
+        button.addEventListener('click', addNote);
+
+        const textarea = document.querySelector('.textarea');
+        const color = document.querySelector('.color')
+        const notesList = document.querySelector('.notes-list')
+        const allNotes = [];
+
+        //use enter button to submit note
+        document.addEventListener('keypress', (event) => {
+            if (event.keyCode === 13){
+                addNote();
+            }
+        })
+        function addNote(){
+
+            //check if something was typed
+            if (textarea){
+                let newNote = {
+                    note: textarea.value,
+                    noteBackground: color.value
+                }
+                allNotes.push(newNote);
+            }
+            else{
+                alert('Note is empty!')
+            }
+
+            //reset the value of textarea
+            textarea.value = "";
+            textarea.focus();
+    
+            showNotes(allNotes);   
+    
+        }//addNote
+
+        function showNotes(notes){
+            notesList.innerHTML = " ";
+            notes.forEach(element => {
+                let noteHTML= `
+                    <div class="note" id="closeNote" style="background-color:${element.noteBackground};">
+                        <div class="card-child">
+                            ${element.note}
+                            <div class="timeStampDiv"><button class="deleteBtn">Delete</button></div>
+                        </div>
+                    </div>
+                    `;
+                notesList.insertAdjacentHTML('afterbegin', noteHTML);
+
+                const deleteBtn = document.querySelector('.deleteBtn');
+                deleteBtn.addEventListener('click', e => {deleteNote(e,element)})
+            });    
+        }//showNotes
+
+        function deleteNote(e, element){
+            let item = e.target.parentElement.parentElement.parentElement;
+            item.parentNode.removeChild(item);
+            allNotes.pop(element)
+        }//deletNote
+
+    </script>
+</body>
+</html>

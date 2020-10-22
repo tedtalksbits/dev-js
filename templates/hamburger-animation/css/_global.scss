@@ -1,0 +1,53 @@
+html{
+    background:rgb(25, 24, 24);
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    width: 100vh;
+    margin: auto;
+}
+.hamburger{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    &__lines{
+        padding: 1.2rem;
+        background: crimson;
+        transition: all ease-in-out 300ms;
+    }
+}
+
+span{
+    display: block;
+    width: 1.5rem;
+    height: .12rem;
+    background: white;
+    text-align: center;
+    transition: all ease-in-out 300ms;
+    transform-origin: 3px 1px;
+}
+.span-style{
+    margin-bottom:.3rem;
+}
+.open-color{
+    background: rgb(20, 220, 93);
+}
+.open{
+    span:first-child{
+        transform: rotate(45deg);
+        margin: none;
+    }
+    span:nth-child(2){
+        opacity: 0;
+        margin: none;
+    }
+    span:last-child{
+        transform: rotate(-45deg);
+        margin: none;
+    }
+}

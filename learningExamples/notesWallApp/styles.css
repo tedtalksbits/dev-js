@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+html{
+    font-family: 'Quicksand', sans-serif;
+}
+.top-div{
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+.column{
+    display: grid;
+    grid-template-columns: 10px 1fr 10px ;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+    grid-template-areas: 
+        ". top-middle ."
+        ". bottom-middle .";
+}
+.color{
+    grid-area: top-middle;
+}
+.add-note{
+    grid-area: bottom-middle;
+
+}
+.color{
+    width: 5rem;
+    height: 1.9rem;
+    justify-self: stretch;
+
+}
+.textarea{
+    box-shadow: 6px 6px 0px 2px #f0e227;
+    border-radius: 10px;
+    margin: 26px;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px 10px;
+}
+.add-note{
+    background: #394257;
+    box-shadow: 3px 3px 0px 1px #f0e227;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.add-note:hover{
+    background: rgb(137, 255, 243);
+    color: rgb(20, 20, 20);
+}
+.notes-list{
+    display: grid;
+    height:300px;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 30px 40px;
+}
+.note{
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px 1px #f0e227;
+    margin-bottom: 25px;
+}
+.deleteBtn{
+    padding: 5px 10px;
+    
+}

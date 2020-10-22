@@ -1,0 +1,71 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    background:#fefefefe;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.748);
+}
+.btn{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.558);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 3px 5px 20px 6px rgba(0, 0, 0, 0.272);
+    outline:none;
+}
+.btn:hover{
+    background: rgb(114, 255, 222);
+    
+}
+.card{
+    text-align: center;
+    
+
+}
+.content{
+    padding: 50px;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255, 255, 255, 0.177);
+    border-radius: 25px;
+    box-shadow: 3px 5px 33px 6px rgba(0,0,0,0.56);
+}
+.quote-bubble{
+    color: white;
+    padding: 50px;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background:rgb(53, 56, 54);
+    border-radius: 25px;
+    box-shadow: 3px 5px 33px 6px rgba(0,0,0,0.56);
+}
+h1{
+    background: rgb(114, 255, 222);
+    padding: 10px 0;
+    border-radius: 15px;
+    box-shadow: 3px 5px 20px 6px rgba(0, 0, 0, 0.272);
+}
+p{
+    margin-top: 30px;
+}
+span{
+    color: rgb(114, 255, 222);
+}
+
+/*addquote.html*/
+
+form{
+   display: grid;
+   place-items: center;
+   height: 500PX;
+  
+}

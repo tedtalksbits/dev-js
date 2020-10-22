@@ -1,0 +1,11 @@
+.blue{
+    background: lightblue;
+    height: 500px;
+    width: 500px;
+    display: grid;
+    place-items: center;
+}
+.coral{
+    padding: 30px;
+    background: lightcoral;
+}

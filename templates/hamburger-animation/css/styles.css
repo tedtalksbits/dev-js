@@ -1,0 +1,65 @@
+html {
+  background: #191818;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  width: 100vh;
+  margin: auto;
+}
+
+.hamburger {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.hamburger__lines {
+  padding: 1.2rem;
+  background: crimson;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+span {
+  display: block;
+  width: 1.5rem;
+  height: .12rem;
+  background: white;
+  text-align: center;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
+}
+
+.span-style {
+  margin-bottom: .3rem;
+}
+
+.open-color {
+  background: #14dc5d;
+}
+
+.open span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: none;
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+  margin: none;
+}
+
+.open span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: none;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppings', sans-serif;
+}
+nav{
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.115);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    overflow: hidden;
+}
+nav p {
+    color: #0594ec;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.burger{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #0594ec;
+    display: none;
+}
+.burger:focus{
+    outline: none;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+   
+}
+nav ul li {
+    /*margin between each individual li item*/
+    /*0px 10px = - 0px top and bottom and 10px - right and left*/
+    margin: 0 10px;
+}
+
+
+nav ul li a {
+    color: #2c405e;
+    text-decoration: none;
+    position: relative;
+    
+}
+
+/*create line under text(not visibe 
+because -18px is out of the nav parent which is set to overflow:hidden;*/
+nav ul li a::after{
+    content: '';
+    background-color: #2c405e;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    /*animate the line under text*/
+    transition: transform 0.5s ease;
+
+}
+nav ul li a:hover::after{
+    transform: translateY(-15px);
+    opacity: 1;
+}
+
+/*responsive - mobile*/
+@media (max-width: 480px){
+    .burger{
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        background-color: white;
+        flex-direction: column;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.115);
+        width: 80%;
+        left: 10%;
+        top: 80px;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease;
+
+    }
+    nav ul.show{
+        transform: translateX(0);
+    }
+
+    nav ul li{
+        margin: 15%;
+    }
+}
+

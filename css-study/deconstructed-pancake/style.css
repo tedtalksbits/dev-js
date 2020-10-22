@@ -1,0 +1,20 @@
+.ex2 .parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    display: grid;
+    place-items: center;
+    background: lightskyblue;
+    height: 150px;
+    font-size: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+}
+.ex2 .box {
+    flex: 1 1 150px; /*stretching*/
+    flex: 0 1 150px; /*No stretching*/
+    margin: 5px;
+}
